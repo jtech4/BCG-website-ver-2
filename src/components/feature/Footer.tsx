@@ -81,6 +81,10 @@ export default function Footer() {
           <p className="text-xs text-gray-600">
             &copy; {new Date().getFullYear()} Brito Consulting Group. All rights reserved.
           </p>
+          <div className="flex items-center gap-2 text-[#e8b84b]">
+            <i className="ri-translate-2 text-sm"></i>
+            <span className="text-xs font-medium">Se Habla Español</span>
+          </div>
           <p className="text-xs text-gray-600">
             IT for small and medium size businesses to feel Enterprise Level
           </p>

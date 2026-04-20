@@ -57,6 +57,10 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
+          <span className="flex items-center gap-1.5 text-xs text-[#e8b84b] font-medium whitespace-nowrap">
+            <i className="ri-translate-2 text-sm"></i>
+            Se Habla Español
+          </span>
           <Link
             to="/contact"
             className="ml-2 px-5 py-2 rounded-full bg-[#e8b84b] text-[#0f1117] text-sm font-semibold uppercase tracking-widest whitespace-nowrap cursor-pointer hover:bg-[#f0c96a] transition-colors duration-200"

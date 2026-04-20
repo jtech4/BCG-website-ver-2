@@ -74,6 +74,12 @@ export default function ContactPage() {
             </p>
           </div>
 
+          {/* Se Habla Español banner */}
+          <div className="flex items-center justify-center gap-3 mb-10 py-3 px-6 rounded-xl bg-[#e8b84b]/10 border border-[#e8b84b]/30 max-w-xs mx-auto">
+            <i className="ri-translate-2 text-[#e8b84b] text-xl"></i>
+            <span className="text-[#0f1117] font-semibold text-sm tracking-wide">Se Habla Español</span>
+          </div>
+
           {/* Contact info cards — horizontal row */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-14">
             {contactInfo.map((item) => (

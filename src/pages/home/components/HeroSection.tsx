@@ -66,6 +66,12 @@ export default function HeroSection() {
           </Link>
         </div>
 
+        {/* Se Habla Español badge */}
+        <div className="mt-8 inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm">
+          <i className="ri-translate-2 text-[#e8b84b] text-base"></i>
+          <span className="text-white text-sm font-medium tracking-wide">Se Habla Español</span>
+        </div>
+
 
       </div>
     </section>
