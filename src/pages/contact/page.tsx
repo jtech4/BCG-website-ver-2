@@ -4,7 +4,7 @@ import Footer from '@/components/feature/Footer';
 
 const contactInfo = [
   { icon: 'ri-phone-line', label: 'Phone', value: '+1 (714) 509-0088', href: 'tel:+17145090088' },
-  { icon: 'ri-mail-line', label: 'Email', value: 'info@britoconsulting.com', href: 'mailto:info@britoconsulting.com' },
+  { icon: 'ri-mail-line', label: 'Email', value: 'info@britoconsultinggroup.com', href: 'mailto:info@britoconsultinggroup.com' },
   { icon: 'ri-map-pin-line', label: 'Service Area', value: 'Serving Orange County, Inland Empire & Los Angeles', href: '/services' },
   { icon: 'ri-time-line', label: 'Hours', value: 'Mon–Fri: 8am–6pm PST\n24/7 Emergency Support', href: '#' },
 ];
@@ -14,25 +14,29 @@ export default function ContactPage() {
   const [charCount, setCharCount] = useState(0);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const form = e.currentTarget;
-    const data = new URLSearchParams();
-    const formData = new FormData(form);
-    formData.forEach((value, key) => {
-      data.append(key, value.toString());
+  e.preventDefault();
+  const form = e.currentTarget;
+  const formData = new FormData(form);
+
+  formData.append('form-name', 'contact');
+
+  try {
+    const response = await fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData as any).toString(),
     });
 
-    try {
-      await fetch('https://readdy.ai/api/form/d7h90nehdlg6dog9csrg', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: data.toString(),
-      });
-      setSubmitted(true);
-    } catch {
-      setSubmitted(true);
-    }
-  };
+    if (!response.ok) throw new Error('Form submission failed');
+
+    setSubmitted(true);
+    form.reset();
+    setCharCount(0);
+  } catch (error) {
+    console.error(error);
+    alert('There was a problem sending your message. Please try again.');
+  }
+};
 
   return (
     <div className="min-h-screen bg-white">
@@ -118,11 +122,14 @@ export default function ContactPage() {
                     <p className="text-gray-500 text-sm mb-8">Fill out the form and we&apos;ll get back to you within 24 hours.</p>
 
                     <form
-                      data-readdy-form
-                      id="contact-form-bcg"
+                     name="contact"
+                      method="POST"
+                      data-netlify="true"
                       onSubmit={handleSubmit}
                       className="flex flex-col gap-5"
                     >
+                      <input type="hidden" name="form-name" value="contact" />
+                      
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                         <div>
                           <label className="block text-xs font-semibold text-[#0f1117] uppercase tracking-widest mb-2">

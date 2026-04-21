@@ -69,8 +69,8 @@ export default function Footer() {
               <li><Link to="/contact" onClick={scrollToTop} className="hover:text-white transition-colors cursor-pointer">Help Desk</Link></li>
               <li><Link to="/contact" onClick={scrollToTop} className="hover:text-white transition-colors cursor-pointer">Get a Quote</Link></li>
               <li>
-                <a href="mailto:info@britoconsulting.com" className="hover:text-white transition-colors cursor-pointer">
-                  info@britoconsulting.com
+                <a href="mailto:info@britoconsultinggroup.com" className="hover:text-white transition-colors cursor-pointer">
+                  info@britoconsultinggroup.com
                 </a>
               </li>
             </ul>
