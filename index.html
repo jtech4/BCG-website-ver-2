@@ -26,7 +26,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css">
   </head>
   <body>
-    <form name="contact" netlify hidden>
+    <form name="contact" method="POST" data-netlify="true" hidden>
+  <input type="hidden" name="form-name" value="contact" />
   <input type="text" name="first_name" />
   <input type="text" name="last_name" />
   <input type="email" name="email" />
