@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'instant' });
 
 const LOGO_URL =
-  'https://storage.readdy-site.link/project_files/71bb764e-4fe9-4082-aa15-14fec6161f6f/b5c1356c-0adb-48bf-8921-b71ccdd0aa3d_Logo-only.png?v=6d610c3a88bf087c680cad722c27f4c1';
+  '/logo-only.png';
 
 export default function Footer() {
   return (
