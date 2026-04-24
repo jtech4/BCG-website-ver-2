@@ -22,14 +22,6 @@ export default function Footer() {
               IT solutions for businesses that mean business. Enterprise-level support, SMB pricing.
             </p>
             <div className="flex items-center gap-4 mt-6">
-              <a href="https://linkedin.com" target="_blank" rel="nofollow noopener noreferrer" className="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-white transition-colors cursor-pointer">
-                <i className="ri-linkedin-fill text-lg"></i>
-              </a>
-              <a href="https://twitter.com" target="_blank" rel="nofollow noopener noreferrer" className="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-white transition-colors cursor-pointer">
-                <i className="ri-twitter-x-fill text-lg"></i>
-              </a>
-              <a href="https://facebook.com" target="_blank" rel="nofollow noopener noreferrer" className="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-white transition-colors cursor-pointer">
-                <i className="ri-facebook-fill text-lg"></i>
               </a>
             </div>
           </div>
