@@ -21,8 +21,6 @@ export default function Footer() {
             <p className="text-sm leading-relaxed text-gray-500">
               IT solutions for businesses that mean business. Enterprise-level support, SMB pricing.
             </p>
-            <div className="flex items-center gap-4 mt-6">
-              </a>
             </div>
           </div>
 
