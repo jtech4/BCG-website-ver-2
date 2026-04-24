@@ -22,7 +22,6 @@ export default function Footer() {
               IT solutions for businesses that mean business. Enterprise-level support, SMB pricing.
             </p>
             </div>
-          </div>
 
           {/* Company */}
           <div>
