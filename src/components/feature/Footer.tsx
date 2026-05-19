@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'instant' });
 
 const LOGO_URL =
-  '/logo-only.png';
+  '/Logo-only.png';
 
 export default function Footer() {
   return (
