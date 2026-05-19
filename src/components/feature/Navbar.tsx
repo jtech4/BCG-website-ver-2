@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 const LOGO_URL =
-  '/logo-only.png';
+  '/Logo-only.png';
 
 const navLinks = [
   { label: 'Home', path: '/' },
